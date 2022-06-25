@@ -5,6 +5,7 @@
 
 .mainContainer {
   min-height: 100vh;
+  min-width: 1500px;
   width: 100%;
   background-color: #f1c744;
   background-position: center;
@@ -105,6 +106,7 @@
   background-color: #446EF1;
   color: #ffffff;
   display: inline-block;
+  text-align: center;
   width: 160px;
   padding: 10px;
   white-space: nowrap;

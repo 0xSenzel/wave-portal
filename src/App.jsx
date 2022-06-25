@@ -17,6 +17,7 @@ const App = () => {
   const [tweetValue, setTweet] = React.useState("");
   const [showAnimation, setShowAnimation] = useState(false);
   const [buttonText, setButtonText] = useState('👋');
+  
   /*
   * Create a variable here that holds the contract address after you deploy!
   */
@@ -62,35 +63,6 @@ const App = () => {
       console.log(error);
     }
   }
-  
-  const checkIfWalletIsConnected = async () => {
-    try {
-      const { ethereum } = window;
-
-      if (!ethereum) {
-      console.log("Make sure you have metamask!");
-        return;
-      } else {
-        console.log("We have the ethereum object", ethereum);
-      }
-  
-      //Check if we're authorized to access the user's wallet
-      const accounts = await ethereum.request({ method: "eth_accounts" });
-
-      if (accounts.length !== 0) {
-        const account = accounts[0];
-        console.log("Found an authorized account:", account);
-        getAllWaves()
-        setCurrentAccount(account);
-        setshowCurrent(account);
-        
-      } else {
-        console.log("No authorized account found")
-        }  
-    } catch (error) {
-      console.log(error);
-      }
-  }
 
   const connectWallet = async () => {
     try {
@@ -104,8 +76,11 @@ const App = () => {
       const accounts = await ethereum.request({ method: "eth_requestAccounts" });
 
       console.log("Connected", accounts[0]);
+      getWaveCount();
       setCurrentAccount(accounts[0]);
       setshowCurrent(accounts[0]);
+      getAddress();
+      getAllWaves();
       
     } catch (error) {
       console.log(error)
@@ -147,15 +122,45 @@ const App = () => {
   }
 }
 
-  
+  const getAddress = async () => {
+    try {
+      const { ethereum } = window;
+
+      if (!ethereum) {
+        return;
+      }
+
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+      let addyAccounts = ''
+      for (let i = 0; i< 5; i++) addyAccounts += accounts[0][i];
+      addyAccounts += '.......';
+      for (let i = accounts[0].length-5; i<accounts[0].length; i++) addyAccounts += accounts[0][i];
+      setshowCurrent(addyAccounts);
+    } catch(error) {
+      console.log(error)
+    }
+  }
+
+  const getWaveCount = async () => {
+    const { ethereum } = window;
+      if (ethereum) {
+        const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+        const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
+
+        const count = await wavePortalContract.getTotalWaves();
+        setWaveCount(count); // This will set the wave count to the state
+    }
+  }
   
 /*
 * This runs our function when the page loads.
 */
 useEffect(() => {
-  checkIfWalletIsConnected()
-  
-},[getAllWaves]);
+  getAddress();
+  getWaveCount();
+
+},[]);
 
 // Animation timeout 3sec
 React.useEffect(() => {
@@ -207,7 +212,7 @@ useEffect(() => {
         </div>
 
         <div className="bio">
-        Tap the button to wave at me 🙋‍♂️ <br></br> Drop me a msg while you're on it!
+        Connect your Rinkeby wallet to wave at me 🙋‍♂️ <br></br> Drop me a msg ✍🏻 while you're on it!
         </div>
         <br></br>
         
