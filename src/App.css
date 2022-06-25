@@ -1,0 +1,161 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.mainContainer {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f1c744;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.dataContainer {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1000px;
+  horizontal-alignment: center;
+}
+
+.header {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 70px;   
+  font-family: Vesterbro, Times, serif;
+  color: black;
+  text-shadow: 0 1px 0 #000000,
+               0 2px 0 #000000,
+               0 3px 0 #000000,
+               0 4px 0 #000000,
+               0 5px 0 #000000,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+
+.header2 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 70px;
+}
+
+.bio {
+  text-align: center;
+  color: #000000;
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  
+}
+
+
+.waveButton {
+  cursor: pointer;
+  margin: auto;
+  background-color: #f1c744;
+  font-size: 30px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 15px;
+  margin-top: 16px;
+  font-weight: 950;
+  font-family: Vesterbro, Times, serif;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-style: solid;
+  border-top-width: 4px;
+  border-top-color: black;
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-bottom-color: black;
+  border-right-style: solid;
+  border-right-width: 4px;
+  border-right-color: black;
+  border-left-style: solid;
+  border-left-width: 4px;
+  border-left-color: black;
+  
+}
+
+.topleft {
+  cursor: default;
+  background-color: #446EF1;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 15px;
+  position: relative; left: -50px; top: 5px;
+  font-family: 'VT323', monospace;
+}
+
+.topright {
+  background-color: #446EF1;
+  color: #ffffff;
+  display: inline-block;
+  width: 160px;
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 15px;
+  position: relative; right: -720px; top: 20px;
+  font-size: 15px;
+  font-family: 'VT323', monospace;
+}
+
+.tweetArea {
+  cursor: auto;
+  background-color: #000000;
+  color: #f3ec78;
+  font-size: 30px;
+  margin: auto;
+  padding: 30px;
+  border-style: inset;
+  border-width: 3px;
+  width: 600px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  font-family: 'VT323', monospace;
+}
+
+.waveHand {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.messages {
+  color: #ffffff;;
+  background-Color: #000000;
+  padding: 25px;
+  border-style: inset;
+  border-width: 3px;
+  margin: auto;
+  width: 800px;
+  height: 80px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  font-family: 'VT323', monospace;
+}
+
+.msgfont {
+  color: #f3ec78;
+  font-size: 30px;
+  font-family: 'VT323', monospace;
+}
