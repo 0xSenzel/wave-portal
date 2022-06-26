@@ -1,13 +1,44 @@
-## Running React on Repl.it
+# Wave Portal
+### A simple Dapp to 'nudge' an address and leaving messages down with Smart Contract.
+Credit to: [BuildSpace](https://buildspace.so/)
+### DEMO:
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62827213/175799624-377c09e4-ad08-4549-b0ac-02d9e168cd88.PNG" width=60% height=30%>
+</p>
+<p align="center">
+    <em>Dapp Landing Page</em>
+</p>
 
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62827213/175799758-1449d1c8-272b-46fd-887a-a8d53cbbc89d.PNG" width=60% height=30%>
+</p>
+<p align="center">
+    <em>After Connecting Wallet</em>
+</p>
 
-Using the two in conjunction is one of the fastest ways to build a web app.
+## Preview Dapp: https://drop-me-msg.janus9.repl.co
 
-### Getting Started
-- Hit run
-- Edit [App.jsx](#src/App.jsx) and watch it live update!
-
-By default, Replit runs the `dev` script, but you can configure it by changing the `run` field in the `.replit` file.
+## Project Setup
+```
+npm init -y
+npm install --save-dev hardhat
+npm hardhat
+```
+### HardHat Environment
+Compiling Smart Contract
+```
+npx hardhat compile
+```
+Deploying to your local Hardhat Blockchain
+1. Start a Hardhat Node
+   ```
+   npx hardhat node
+   ```
+2. Deploy Smart Contract in `localhost` or `rinkeby` network
+    ```
+    npx hardhat run --network localhost scripts/deploy.js
+    ```
+    ```
+    npx hardhat run --network rinkeby scripts/deploy.js
+    ```
