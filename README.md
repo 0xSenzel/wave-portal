@@ -1,7 +1,7 @@
 # Wave Portal
 ### A simple Dapp to 'nudge' an address and leaving messages down with Smart Contract.
-Credit to: [BuildSpace](https://buildspace.so/)
-### DEMO:
+Tutorial by: [BuildSpace](https://buildspace.so/)
+### PREVIEW:
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/62827213/175799624-377c09e4-ad08-4549-b0ac-02d9e168cd88.PNG" width=60% height=30%>
@@ -17,7 +17,7 @@ Credit to: [BuildSpace](https://buildspace.so/)
     <em>After Connecting Wallet</em>
 </p>
 
-## Preview Dapp: https://drop-me-msg.janus9.repl.co
+[Live Preview](https://drop-me-msg.janus9.repl.co) 
 
 ## Project Setup
 ```
