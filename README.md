@@ -1,6 +1,6 @@
 # Wave Portal
 ### A simple Dapp to 'nudge' an address and leaving messages down with Smart Contract.
-Tutorial by: [BuildSpace](https://buildspace.so/)
+
 ### PREVIEW:
 
 <p align="center">
