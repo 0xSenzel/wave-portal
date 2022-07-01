@@ -1,5 +1,5 @@
 # Wave Portal
-### A simple Dapp to 'nudge' an address and leaving messages down with Smart Contract.
+### A simple Dapp to wave an address and leave messages down with Smart Contract. Connect through metamask wallet with Rinkeby network to test the functionality.
 
 ### PREVIEW:
 
