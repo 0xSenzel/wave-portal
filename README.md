@@ -33,7 +33,7 @@ Website where anyone with Ethereum wallet on Goerli Testnet able to send me a ðŸ
 
 ### Hardhat
 
-Head to [hardhat-tutorial](./smart-contracts/) folder:
+Head to [smart-contracts](./smart-contracts/) folder:
 
 Install dependencies
 
@@ -58,7 +58,7 @@ Then run the following command.
 
 ```
 npx hardhat run scripts/deploy.js --network goerli
-npx hardhat verify --network mumbai YOUR_SMARTCONTRACT_ADDRESS "CONSTRUCTOR ARG1" "CONSTRUCTOR ARG2"
+npx hardhat verify --network goerli YOUR_SMARTCONTRACT_ADDRESS "CONSTRUCTOR ARG1" "CONSTRUCTOR ARG2"
 ```
 
 <br/>
